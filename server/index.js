@@ -23,6 +23,7 @@ app.get('/api/products',(req, res, next) => {
   const sql = `
   select "name",
         "price",
+        "image",
         "productId",
         "shortDescription"
   from "products"
