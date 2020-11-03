@@ -35,12 +35,7 @@ app.get('/api/products', (req, res, next) => {
 
 app.get('/api/products/:productId', (req, res, next) => {
   const productId = parseInt(req.params.productId, 10);
-  // if(productId <= 0) {
-  //   res.status(400).json({
-  //     error: `${productId} must be a valid number`
-  //   });
-  //   return;
-  // }
+
   const sql = `
   select *
   from "products"
