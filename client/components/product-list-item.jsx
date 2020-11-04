@@ -5,9 +5,15 @@ function ProductListItem(props) {
   const pr = priceNum.toString().split('');
   pr.splice((pr.length - 2), 0, '.');
   const priceActual = pr.join('');
+
+  function handleClick(event) {
+
+    props.setView('details', { productId: props.product.productId });
+  }
+
   return (
 
-    <div className="card col-3">
+    <div className="card col-3" onClick={handleClick}>
       <img className="card-img-top" src={props.product.image} alt={props.product.name}/>
       <div className="card-body">
         <p className="card-text">{props.product.name}</p>
