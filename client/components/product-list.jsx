@@ -10,30 +10,30 @@ export default class ProductList extends React.Component {
     this.getProducts = this.getProducts.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.getProducts();
 
   }
-    getProducts() {
-      fetch('/api/products')
+
+  getProducts() {
+    fetch('/api/products')
       .then(res => res.json())
       .then(data => {
         this.setState({
           products: data
-        })
+        });
       })
       .catch(err => console.error(err));
-    }
-
+  }
 
   render() {
     const products = this.state.products.map(product =>
-      <ProductListItem key={product.productId} product={product}/>
-      )
+      <ProductListItem key={product.productId} product={product} setView={this.props.setView}/>
+    );
     return (
       <div className ="container">
         <div className="row d-flex flex-wrap mb-4 d-flex justify-content-center">{products}</div>
       </div>
-    )
+    );
   }
 }
