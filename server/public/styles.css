@@ -45,3 +45,13 @@ img {
   color: white;
 
 }
+
+
+.cart-img {
+  width: 380px;
+  height: 350px;
+}
+
+.cart-item {
+  max-width: 800px;
+}
