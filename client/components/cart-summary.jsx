@@ -19,9 +19,9 @@ function CartSummary(props) {
     );
   } else {
     return (
-      <div className ="container">
+      <div className="container">
         <div className="row">
-          <div className ="catalog" onClick={() => props.setView('catalog', null)}>Back to catalog</div>
+          <div className="catalog" onClick={() => props.setView('catalog', null)}>Back to catalog</div>
           <h3 className="col-12">My Cart</h3>
         </div>
         <div>
@@ -31,12 +31,13 @@ function CartSummary(props) {
               cartStr = cartTotal.toString().split('');
               cartStr.splice((cartStr.length - 2), 0, '.');
               actualTotal = cartStr.join('');
-              return <CartSummaryItem key={item.cartItemId} item={item}/>;
+              return <CartSummaryItem key={item.cartItemId} item={item} />;
             })
           }
         </div>
-        <div>
+        <div className="d-flex col-11 m-auto">
           <div><h4>{`Item Total $${actualTotal}`}</h4></div>
+          <button className="btn btn-primary ml-auto" onClick={() => props.setView('checkout', {})}>Place Order</button>
         </div>
       </div>
     );
