@@ -5,7 +5,7 @@ function CartSummary(props) {
   let cartTotal = 0;
   let cartStr = null;
   let actualTotal = null;
-  if (props.cartItem1.length === 0) {
+  if (props.cartItem.length === 0) {
     return (
       <div className="container">
         <div className="row">
