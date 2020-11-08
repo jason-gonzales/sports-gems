@@ -46,7 +46,7 @@ export default class ProductDetails extends React.Component {
       return (
         <div className="container" onClick={this.handleClick}>
           <div className="d-flex justify-content-center">
-            <div className="card card-detail">
+            <div className="card card-detail-product">
               <div className="row ml-5 mb-3" id="catalog">Back to catalog</div>
               <div className="row no-gutters">
                 <div className="col-6">
