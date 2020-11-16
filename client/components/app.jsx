@@ -63,7 +63,7 @@ export default class App extends React.Component {
   placeOrder(object) {
     const requestOptions = {
       method: 'POST',
-      header: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(object)
     };
     fetch('/api/orders', requestOptions)

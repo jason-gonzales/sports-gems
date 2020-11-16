@@ -26,7 +26,7 @@ function CartSummary(props) {
         </div>
         <div>
           {
-            props.cartItem1.map(item => {
+            props.cartItem.map(item => {
               cartTotal += item.price;
               cartStr = cartTotal.toString().split('');
               cartStr.splice((cartStr.length - 2), 0, '.');
