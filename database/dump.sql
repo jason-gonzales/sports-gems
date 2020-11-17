@@ -238,6 +238,29 @@ COPY public."cartItems" ("cartItemId", "cartId", "productId", price) FROM stdin;
 88	24	2	2595
 89	24	5	9900
 90	24	3	2900
+91	25	2	2595
+92	25	2	2595
+93	24	3	2900
+94	24	3	2900
+95	24	1	2999
+96	24	1	2999
+97	26	4	999
+98	24	1	2999
+99	24	1	2999
+100	27	2	2595
+101	28	3	2900
+102	28	5	9900
+103	28	2	2595
+104	28	1	2999
+105	28	1	2999
+106	29	3	2900
+107	29	6	830
+108	29	3	2900
+109	30	3	2900
+110	30	3	2900
+111	30	2	2595
+112	31	2	2595
+113	31	2	2595
 \.
 
 
@@ -247,6 +270,13 @@ COPY public."cartItems" ("cartItemId", "cartId", "productId", price) FROM stdin;
 
 COPY public.carts ("cartId", "createdAt") FROM stdin;
 24	2020-11-06 09:08:10.279235-08
+25	2020-11-06 11:27:19.358638-08
+26	2020-11-06 19:40:24.767602-08
+27	2020-11-07 19:31:30.776284-08
+28	2020-11-07 19:34:48.329794-08
+29	2020-11-07 20:22:56.53505-08
+30	2020-11-07 20:33:46.098992-08
+31	2020-11-16 15:44:06.790057-08
 \.
 
 
@@ -255,6 +285,14 @@ COPY public.carts ("cartId", "createdAt") FROM stdin;
 --
 
 COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", "createdAt") FROM stdin;
+1	25	Jason	1234566665	123 lets go st	2020-11-06 12:02:34.782833-08
+2	26	Jason	1234566665	55555 champion	2020-11-06 19:40:43.179053-08
+3	27	Jason	1234566665	55555 champion	2020-11-07 19:31:40.363696-08
+4	28	adsfds	343432	asdfsaf	2020-11-07 20:16:29.318395-08
+5	28	KOBEEE	234324	Lakers Street 	2020-11-07 20:17:51.804652-08
+6	29	Julie	3245325345	Fullerton	2020-11-07 20:28:35.805167-08
+7	30	Jason Derullo	234324	Los Angeles Ca	2020-11-07 20:38:50.597939-08
+8	31	Stephen Curry	12344555	San Francisco, CA	2020-11-16 15:45:02.959732-08
 \.
 
 
@@ -263,12 +301,12 @@ COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", 
 --
 
 COPY public.products ("productId", name, price, image, "shortDescription", "longDescription") FROM stdin;
-1	Shake Weight	2999	/images/shake-weight.jpg	Dynamic Inertia technology ignites muscles in arms, shoulders, and chest.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-2	ShamWow	2595	/images/shamwow.jpg	It's like a chamois, towel, and sponge, all in one! Soaks up to 10x it's weight in any liquid!	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-3	Snuggie	2900	/images/snuggie.jpg	Super-Soft Fleece with pockets! One Size fits all Adults! Keeps you Warm & Your Hands-Free!	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-4	Wax Vac	999	/images/wax-vac.jpg	Gentle way to remove ear wax. Safe and hygienic. Reduces the risk of painful infections.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-5	Ostrich Pillow	9900	/images/ostrich-pillow.jpg	Create your own snugly space in the world and feel-good anywhere with the ultimate cocoon pillow.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-6	Tater Mitts	830	/images/tater-mitts.jpg	8 Seconds is all you need with Tater Mitts. Quickly and easily prepare all your favorite potato dishes with Tater Mitts.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock.\\nAesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
+7	Shaq and Magic Signed Basketball	25000	/images/bball-signed.webp	Dual Signed Los Angeles Lakers Shaquille O' Neal and  Magic Johnson Fanatics Authentic Indoor/Outdoor Basketball	This basketball has been personally hand-signed by Shaquille O' Neal and Magic Johnson. It is officially licensed by the National Basketball Associated and comes with an individually numbered, tamper-evident hologram from Fanatic Authentic.To ensure authenticity,the hologram can be reviewed online. This process helps to ensure that the product purchased is authentic and eliminates any possibility of duplication or fraud.
+8	Aaron Rodgers Signed Helmet	60000	/images/rodgers-helmet.webp	Aaron Rodgers Green Bay Packers Autographed Authentic Riddell Proline Helmet with individually numbered, tamper-evident hologram	This helmet has been personally hand-signed by Aaron Rodgers. It is officially licensed by the National Football League and comes with an individually numbered, tamper-evident hologram from Fanatics Authentic. To ensure authenticity, the hologram can be reviewed online. This process helps to ensure that the product purchased is authentic and eliminates any possibilty of duplication or fraud.
+9	Stephen Curry Signed Funko Pop	30000	/images/curry-toy.webp	 Autographed Golden State Warriors Stephen Curry Fanatics Authentic Funko Pop! Figurine - Limited Edition of 100	 This figurine has been personally hand-signed by Stephen Curry. It is officially licensed by the National Basketball Association and comes with an individually numbered, tamper-evident hologram from Fanatics Authentic. To ensure authenticity, the hologram can be reviewed online. This process helps to ensure that the product purchased is authentic and eliminates any possibility of duplication or fraud. This is a limited edition of 100.
+10	Kobe Bryant Sublimated Plaque	8100	/images/kobe-signed.webp	Los Angeles Lakers Kobe Bryant Fanatics Authentic 10.5" x 13" 60 Point Finale Sublimated Plaque	Commemorate Kobe Bryant scoring 60 points in his last NBA game with this sublimated plaque. Each collectible comes an 8" x 10" image and descriptive text sublimated onto a black plaque. The product is officially licensed by the National Basketball Association. It measures 10.5" x 13" x 1" and comes ready to hang in any home or office.
+11	Cooper Kupp Signed Football	12099	/images/kupp-ball.webp	Autographed Los Angeles Rams Cooper Kupp Fanatics Authentic Jarden 2020 Logo White Panel Football	This football has been personally hand-signed by Cooper Kupp. It is officially licensed by the National Football League and comes with an individually numbered, tamper-evident hologram from Fanatics Authentic. To ensure authenticity, the hologram can be reviewed online. This process helps to ensure that the product purchased is authentic and eliminates any possibility of duplication or fraud.
+12	Mike Trout Signed Baseball	80000	/images/trout-baseball.jpg	 Los Angeles Angels Mike Trout Fanatics Authentic Autographed Baseball and 2018 MLB All-Star Game Gold Glove Display Case with Image	This acrylic display case comes with an image and a baseball personally hand signed by Mike Trout, a sublimated nameplate and a black acrylic base with a gold colored glove. It also features a clear acrylic removable lid. It has been obtained under the auspices of the MLB Authentication Program and can be verified by its numbered hologram at MLB.com. It also comes with an individually numbered, tamper-evident hologram from Fanatics Authentic. To ensure authenticity, the hologram can be reviewed online. This process helps to ensure that the product purchased is authentic and eliminates any possibility of duplication or fraud. Measures 10' x 5' x 5.5'
 \.
 
 
@@ -276,28 +314,28 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 -- Name: cartItems_cartItemId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 90, true);
+SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 113, true);
 
 
 --
 -- Name: carts_cartId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."carts_cartId_seq"', 24, true);
+SELECT pg_catalog.setval('public."carts_cartId_seq"', 31, true);
 
 
 --
 -- Name: orders_orderId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."orders_orderId_seq"', 1, false);
+SELECT pg_catalog.setval('public."orders_orderId_seq"', 8, true);
 
 
 --
 -- Name: products_productId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."products_productId_seq"', 1, false);
+SELECT pg_catalog.setval('public."products_productId_seq"', 12, true);
 
 
 --

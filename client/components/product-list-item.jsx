@@ -14,9 +14,11 @@ function ProductListItem(props) {
   return (
 
     <div className="card col-3" onClick={handleClick}>
-      <img className="card-img-top" src={props.product.image} alt={props.product.name}/>
+      <div clasName="img-container">
+        <img className="card-img-top" src={props.product.image} alt={props.product.name}/>
+      </div>
       <div className="card-body">
-        <p className="card-text">{props.product.name}</p>
+        <p className="card-title">{props.product.name}</p>
         <p className="card-price">${priceActual}</p>
         <p className="card-text">{props.product.shortDescription}</p>
       </div>
