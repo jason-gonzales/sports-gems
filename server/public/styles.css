@@ -15,8 +15,9 @@ margin: auto;
 
 }
 
-.product-list-bg {
+.product-list-bg, .product-detail-bg, .cart-summary-bg{
   background: #fbf7f0;
+  height: 1000px;
 }
 
 .card {
@@ -29,8 +30,15 @@ margin: auto;
 
 }
 
-.card-text {
+.img-container{
+  filter:  brightness(90%) ;
+}
+
+.card-title{
   font-weight: bold;
+}
+.card-text {
+  font-size: small;
 }
 img {
   width: 200px;
