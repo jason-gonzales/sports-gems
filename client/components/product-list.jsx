@@ -31,8 +31,10 @@ export default class ProductList extends React.Component {
       <ProductListItem key={product.productId} product={product} setView={this.props.setView} />
     );
     return (
-      <div className="container">
-        <div className="row d-flex flex-wrap mb-4 d-flex justify-content-center">{products}</div>
+      <div className="product-list-bg">
+        <div className="container">
+          <div className="row d-flex flex-wrap mb-4 d-flex justify-content-center">{products}</div>
+        </div>
       </div>
     );
   }
