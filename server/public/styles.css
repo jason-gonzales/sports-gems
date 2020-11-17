@@ -1,6 +1,6 @@
 header {
   height: 4rem;
-  background: rgb(66, 65, 65);
+  background:#555555;
 
 }
 
@@ -15,6 +15,9 @@ margin: auto;
 
 }
 
+.product-list-bg {
+  background: #fbf7f0;
+}
 
 .card {
   margin: auto;
