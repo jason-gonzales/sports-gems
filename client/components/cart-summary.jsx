@@ -40,7 +40,7 @@ function CartSummary(props) {
           </div>
           <div className="d-flex col-11 container mt-4">
             <div><h4>{`Item Total $${actualTotal}`}</h4></div>
-            <button className="btn btn-primary ml-auto col-sm-5 col-md-3" onClick={() => props.setView('checkout', {})}>Place Order</button>
+            <button className="btn btn-primary ml-auto col-sm-5 col-md-3" onClick={() => props.setView('checkout', {})}>Checkout</button>
           </div>
         </div>
       </div>

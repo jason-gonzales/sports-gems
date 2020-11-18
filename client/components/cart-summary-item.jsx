@@ -7,7 +7,7 @@ function CartSummaryItem(props) {
   const priceActual = pr.join('');
 
   return (
-    <div className="container">
+    <div className="container mt-3">
       <div className="row card mb-3 cart-item m-auto">
         <div className="col-md-12 d-flex justify-content-center">
           <img className="cart-img mt-2" src={props.item.image} alt={props.item.name} />
