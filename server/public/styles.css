@@ -14,15 +14,18 @@ margin: auto;
 
 }
 
-.product-list-bg, .product-detail-bg, .cart-summary-bg, .checkout-bg{
+.product-list-bg, .cart-summary-bg{
   background: #fbf7f0;
-  height: 2000px;
+  height: 2800px;
   /* background-image: url("/images/football-grass.jpg");
   background-repeat: no-repeat;
   background-size: cover; */
 }
 
-
+.product-detail-bg, .checkout-bg {
+    background: #fbf7f0;
+  height: 900px;
+}
 .card-list-item {
 
 height: 380px;
