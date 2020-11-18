@@ -13,9 +13,9 @@ function ProductListItem(props) {
 
   return (
 
-    <div className="card col-3" onClick={handleClick}>
-      <div clasName="img-container">
-        <img className="card-img-top" src={props.product.image} alt={props.product.name}/>
+    <div className="card mt-5 mx-1 card-list-item" onClick={handleClick}>
+      <div clasName="img-container m-auto">
+        <img className="card-img-top pt-2 product-img" src={props.product.image} alt={props.product.name}/>
       </div>
       <div className="card-body">
         <p className="card-title">{props.product.name}</p>

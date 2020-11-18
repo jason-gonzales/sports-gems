@@ -15,33 +15,32 @@ margin: auto;
 
 }
 
-.product-list-bg, .product-detail-bg, .cart-summary-bg{
+.product-list-bg, .product-detail-bg, .cart-summary-bg, .checkout-bg{
   background: #fbf7f0;
-  height: 1000px;
+  height: 2000px;
+  /* background-image: url("/images/football-grass.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
-.card {
-  margin: auto;
-  margin-top: 10px;
-  padding: 10px;
-  height: 450px;
-  box-shadow: gray 1px 1px;
-  margin-left: 20px;
+
+.card-list-item {
+
+height: 380px;
+  width: 370px;
 
 }
-
-.img-container{
-  filter:  brightness(90%) ;
+.card-list-item:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.025);
 }
-
 .card-title{
   font-weight: bold;
 }
 .card-text {
   font-size: small;
 }
-img {
-  width: 200px;
+.product-img, .card-img, .cart-img {
   height: 200px;
   object-fit: contain;
 }
@@ -49,11 +48,29 @@ img {
 .card-detail-product {
 
   max-width: 940px;
-  height: 500px;
+  height: 400px;
 }
 
+@media screen and (max-width: 767px) {
+  .card-detail-product{
+    height: 700px;
+  }
+
+  .detail-img{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 285px) {
+  .card-detail-product{
+    height: 785px;
+  }
+}
 .cart {
   color: white;
+
 
 }
 
@@ -63,6 +80,21 @@ img {
   height: 350px;
 }
 
+@media screen and (max-width:767px) {
+  .cart-img {
+    width:250px;
+  }
+}
+@media screen and (max-width:285px) {
+  .cart-img {
+    width:180px;
+  }
+}
+
 .cart-item {
   max-width: 800px;
+}
+
+.trophy {
+  height: 50px;
 }

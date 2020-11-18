@@ -5,11 +5,13 @@ function Header(props) {
     props.setView('cart', {});
   }
   return (
-    <header className="mb-30 mt-0 d-flex align-items-center">
-      <h2 className="ml-5"><i className="fas fa-football-ball"></i> Sports Treasures</h2>
-      <div className ="cart row justify-content-end col-9 align-items-center">
-        <p className ="m-0">{props.cartCount} Items</p>
-        <i className ="fas fa-shopping-cart" onClick={handleClick}></i>
+    <header className="sticky-top">
+      <div className="pt-2 d-flex">
+        <h2 className="col"><img className="trophy" src="/images/trophy-logo.png"/> Sports Treasures</h2>
+        <div className="d-flex align-items-center pb-2">
+          <p className ="m-0 cart">{props.cartCount} Items</p>
+          <i className ="cart fas fa-shopping-cart mr-4 pl-2" onClick={handleClick}></i>
+        </div>
       </div>
     </header>
   );
