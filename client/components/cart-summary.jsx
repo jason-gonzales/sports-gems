@@ -27,7 +27,7 @@ function CartSummary(props) {
             <div className="catalog" onClick={() => props.setView('catalog', null)}>Back to catalog</div>
             <h3 className="col-12">My Cart</h3>
           </div>
-          <div>
+          <div className="col-11 m-auto">
             {
               props.cartItem.map(item => {
                 cartTotal += item.price;
@@ -38,9 +38,9 @@ function CartSummary(props) {
               })
             }
           </div>
-          <div className="d-flex col-11 m-auto">
+          <div className="d-flex col-11 container mt-4">
             <div><h4>{`Item Total $${actualTotal}`}</h4></div>
-            <button className="btn btn-primary ml-auto" onClick={() => props.setView('checkout', {})}>Place Order</button>
+            <button className="btn btn-primary ml-auto col-sm-5 col-md-3" onClick={() => props.setView('checkout', {})}>Place Order</button>
           </div>
         </div>
       </div>

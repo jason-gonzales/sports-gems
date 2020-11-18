@@ -46,10 +46,10 @@ export default class ProductDetails extends React.Component {
       return (
         <div className="product-detail-bg">
           <div className="container" onClick={this.handleClick}>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center pt-4">
               <div className="card card-detail-product">
-                <div className="row ml-5 mb-3" id="catalog">Back to catalog</div>
-                <div className="row no-gutters">
+                <div className="row ml-3 mb-3" id="catalog">Back to catalog</div>
+                <div className="row no-gutters detail-img">
                   <div className="col-6">
                     <img src={this.state.product.image} className="card-img" alt={this.state.product.name}/>
                   </div>
