@@ -4,14 +4,14 @@ import ProductList from './product-list';
 import ProductDetails from './product-details';
 import CartSummary from './cart-summary';
 import CheckoutForm from './checkout-form';
-import Modal from './modal';
+import ModalElement from './modal';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       view: {
-        name: null,
+        name: 'catalog',
         params: {}
       },
       cart: []
@@ -77,10 +77,13 @@ export default class App extends React.Component {
   }
 
   render() {
-    let view = <Modal setView={this.setView} />;
+    let view = null;
 
     if (this.state.view.name === 'catalog') {
-      view = <ProductList setView={this.setView} />;
+      view = <>
+        <ModalElement />;
+        <ProductList setView={this.setView} />;
+      </>;
     } else if (this.state.view.name === 'details') {
       view = <ProductDetails setView={this.setView} params={this.state.view.params} addToCart={this.addToCart} />;
     } else if (this.state.view.name === 'cart') {
@@ -88,7 +91,9 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'checkout') {
       view = <CheckoutForm cartItem ={this.state.cart} placeOrder ={this.placeOrder} setView={this.setView} />;
     }
+
     return (
+
       <>
         <Header cartCount={this.state.cart.length} setView={this.setView} />
         {view}
