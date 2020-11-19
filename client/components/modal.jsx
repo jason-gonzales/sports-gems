@@ -5,11 +5,11 @@ Modal.setAppElement('#root');
 function ModalElement() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
-    <div>
-      <div className="pt-4 d-flex justify-content-center">
+    <div className="modal-bg">
+      <div className="p-4 d-flex justify-content-center align-items-center">
         <button className="btn btn-warning" onClick={() => setModalIsOpen(true)}>Disclaimer</button>
       </div>
-      <div className="col-3">
+      <div className="col-3 line">
         <Modal isOpen={modalIsOpen}
           onRequestClose={() => setModalIsOpen(false)}
           style={
@@ -20,6 +20,7 @@ function ModalElement() {
                 height: '300px',
                 padding: '50px',
                 overflow: 'auto'
+
               }
             }
           }
