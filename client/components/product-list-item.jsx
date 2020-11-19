@@ -14,7 +14,7 @@ function ProductListItem(props) {
   return (
 
     <div className="card mt-5 mx-1 card-list-item" onClick={handleClick}>
-      <div clasName="img-container m-auto">
+      <div className="img-container m-auto">
         <img className="card-img-top pt-2 product-img" src={props.product.image} alt={props.product.name}/>
       </div>
       <div className="card-body">
