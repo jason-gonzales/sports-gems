@@ -100,3 +100,62 @@ height: 380px;
 .trophy {
   height: 50px;
 }
+
+/* .jumbo-img {
+  background-image: url('images/memorabilia.jpg');
+
+} */
+
+.main {
+  height: 100%;
+  margin: 0;
+  padding:0;
+  background: #f1f1f1;
+}
+
+.hero-image{
+  position: relative;
+  height:450px;
+  overflow:hidden;
+  background:
+linear-gradient(
+  rgba(0,0,0,0.5),
+  rgba(0,0,0,0)
+),
+url('images/memorabilia.jpg') no-repeat center;
+background-size:cover;
+}
+
+.hero-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:#fbf7f0;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero-container h1{
+  font-size: 72px;
+  letter-spacing: 0.2rem;
+}
+
+.hero-container h1 span {
+  border: 10px solid #fbf7f0;
+  padding: 6px 14px;
+  display: inline-block;
+
+}
+
+.des{
+  margin: 20px;
+  display: block;
+  font-size: 30px;
+  text-shadow: 0 0 10px black;
+}
+
+.modal-bg, .line{
+  background: #fbf7f0;
+}
