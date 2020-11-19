@@ -82,7 +82,7 @@ export default class App extends React.Component {
     if (this.state.view.name === 'catalog') {
       view = <>
         <ModalElement />;
-        <div clasName="main">
+        <div className="main">
           <div className="hero-image">
             <div className="hero-container">
               <h1><span>Sports Treasures</span></h1>
@@ -90,12 +90,7 @@ export default class App extends React.Component {
             </div>
           </div>
         </div>
-        {/* <div className="jumbotron jumbotron-fluid jumbo-img">
-          <div className="container">
-            <h1 className="display-4">Fluid jumbotron</h1>
-            <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-          </div>
-        </div> */}
+
         <ProductList setView={this.setView} />;
       </>;
     } else if (this.state.view.name === 'details') {
