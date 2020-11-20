@@ -23,3 +23,5 @@ Try the live application at https://sports-gems.jgonzales.dev/
 * User can view their cart summary - Front End.
 * User can place an order - Back End.
 * User can place an order - Front End.
+# Preview)
+![Watch the Video](https://github.com/jason-gonzales/wicked-sales-js/doc-images/sgems.gif)
