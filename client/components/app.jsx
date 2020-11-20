@@ -85,7 +85,7 @@ export default class App extends React.Component {
         <div className="main">
           <div className="hero-image">
             <div className="hero-container">
-              <h1><span>Sports Treasures</span></h1>
+              <h1><span>Sports Gems</span></h1>
               <span className="des">want a piece of history?</span>
             </div>
           </div>
