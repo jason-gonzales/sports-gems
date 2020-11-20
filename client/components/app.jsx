@@ -81,7 +81,7 @@ export default class App extends React.Component {
 
     if (this.state.view.name === 'catalog') {
       view = <>
-        <ModalElement />;
+        <ModalElement />
         <div className="main">
           <div className="hero-image">
             <div className="hero-container">
@@ -91,7 +91,7 @@ export default class App extends React.Component {
           </div>
         </div>
 
-        <ProductList setView={this.setView} />;
+        <ProductList setView={this.setView} />
       </>;
     } else if (this.state.view.name === 'details') {
       view = <ProductDetails setView={this.setView} params={this.state.view.params} addToCart={this.addToCart} />;
