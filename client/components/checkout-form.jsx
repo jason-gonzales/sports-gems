@@ -50,7 +50,7 @@ export default class CheckoutForm extends React.Component {
       <div className="checkout-bg">
         <form className="container">
           <div className="row justify-content-center">
-            <div className="col-10 col-lg-7 pt-4 m-auto">
+            <div className="col-10 col-lg-7 py-4 m-auto">
               <h3 className="mt-8">Checkout</h3>
               <h5>Order Total: $<span>{this.orderTotal()}</span></h5>
 

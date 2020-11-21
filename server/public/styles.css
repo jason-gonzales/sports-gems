@@ -14,17 +14,15 @@ margin: auto;
 
 }
 
-.product-list-bg, .cart-summary-bg{
+.product-list-bg, .cart-summary-bg, .main{
   background: #fbf7f0;
-  height: 2800px;
-  /* background-image: url("/images/football-grass.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
+
 }
 
 .product-detail-bg, .checkout-bg {
+  height: 100vh;
     background: #fbf7f0;
-  height: 900px;
+
 }
 .card-list-item {
 
@@ -101,10 +99,7 @@ height: 380px;
   height: 50px;
 }
 
-/* .jumbo-img {
-  background-image: url('images/memorabilia.jpg');
 
-} */
 
 .main {
   height: 100%;

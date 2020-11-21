@@ -21,9 +21,9 @@ function CartSummary(props) {
     );
   } else {
     return (
-      <div className="cart-summary-bg">
-        <div className="container">
-          <div className="row">
+      <div className="cart-summary-bg my-10">
+        <div className="container my-10">
+          <div className="row py-10">
             <div className="catalog" onClick={() => props.setView('catalog', null)}>Back to catalog</div>
             <h3 className="col-12">My Cart</h3>
           </div>
@@ -38,7 +38,7 @@ function CartSummary(props) {
               })
             }
           </div>
-          <div className="d-flex col-11 container mt-4">
+          <div className="d-flex col-11 container py-5">
             <div><h4>{`Item Total $${actualTotal}`}</h4></div>
             <button className="btn btn-primary ml-auto col-sm-5 col-md-3" onClick={() => props.setView('checkout', {})}>Checkout</button>
           </div>
