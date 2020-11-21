@@ -33,7 +33,7 @@ export default class ProductList extends React.Component {
     return (
       <div className="product-list-bg">
         <div className="container">
-          <div className="row d-flex mb-4 d-flex justify-content-center">{products}</div>
+          <div className="row d-flex d-flex justify-content-center py-5">{products}</div>
         </div>
       </div>
     );
