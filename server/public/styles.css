@@ -14,12 +14,12 @@ margin: auto;
 
 }
 
-.product-list-bg, .cart-summary-bg, .main{
+.product-list-bg, .main, .cart-summary-bgs{
   background: #fbf7f0;
 
 }
 
-.product-detail-bg, .checkout-bg {
+.product-detail-bg, .checkout-bg, .cart-summary-bg {
   height: 100vh;
     background: #fbf7f0;
 

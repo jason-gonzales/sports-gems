@@ -21,9 +21,9 @@ function CartSummary(props) {
     );
   } else {
     return (
-      <div className="cart-summary-bg my-10">
-        <div className="container my-10">
-          <div className="row py-10">
+      <div className="cart-summary-bgs">
+        <div className="container">
+          <div className="row">
             <div className="catalog" onClick={() => props.setView('catalog', null)}>Back to catalog</div>
             <h3 className="col-12">My Cart</h3>
           </div>
