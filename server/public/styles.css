@@ -13,17 +13,12 @@ header {
 margin: auto;
 
 }
-
-.product-list-bg, .main, .cart-summary-bgs{
+body{
+  height:100vh;
   background: #fbf7f0;
-
 }
 
-.product-detail-bg, .checkout-bg, .cart-summary-bg {
-  height: 100vh;
-    background: #fbf7f0;
 
-}
 .card-list-item {
 
 height: 380px;
@@ -45,16 +40,16 @@ height: 380px;
   object-fit: contain;
 }
 
-.card-detail-product {
+/* .card-detail-product {
 
   max-width: 940px;
   height: 400px;
-}
+} */
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .card-detail-product{
     height: 700px;
-  }
+  } */
 
   .detail-img{
     display: flex;
