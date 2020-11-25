@@ -149,3 +149,7 @@ background-size:cover;
 .modal-bg, .line{
   background: #fbf7f0;
 }
+
+.cursor:hover {
+  cursor: pointer;
+}
