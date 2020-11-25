@@ -48,7 +48,7 @@ export default class CheckoutForm extends React.Component {
   render() {
     return (
       <div className="checkout-bg">
-        <form className="container">
+        <form className="container" onSubmit={this.handleOrder}>
           <div className="row justify-content-center">
             <div className="col-10 col-lg-7 py-4 m-auto">
               <h3 className="mt-8">Checkout</h3>
@@ -56,19 +56,19 @@ export default class CheckoutForm extends React.Component {
 
               <div className="form-group">
                 <label htmlFor="formGroupExampleInput">Name</label>
-                <input name="name" value={this.state.name} onChange={this.handleChange} type="text" className="form-control" id="formGroupExampleInput" />
+                <input name="name" value={this.state.name} onChange={this.handleChange} type="text" className="form-control" id="formGroupExampleInput" required/>
               </div>
               <div className="form-group">
                 <label htmlFor="formGroupExampleInput2">Credit</label>
-                <input name="creditCard" value={this.state.creditCard} onChange={this.handleChange} type="number" className="form-control" id="formGroupExampleInput2" />
+                <input name="creditCard" value={this.state.creditCard} onChange={this.handleChange} type="number" className="form-control" id="formGroupExampleInput2" required/>
               </div>
               <div className="form-group">
                 <label htmlFor="formGroupExampleInput2">Shipping Address</label>
-                <textarea name="shippingAddress" value={this.state.shippingAddress} onChange={this.handleChange} type="text" className="form-control" id="formGroupExampleInput2" />
+                <textarea name="shippingAddress" value={this.state.shippingAddress} onChange={this.handleChange} type="text" className="form-control" id="formGroupExampleInput2" required/>
               </div>
               <div className="d-flex">
-                <p onClick={() => this.props.setView('catalog', null)}>Continue Shopping</p>
-                <button type="submit" className="btn btn-primary ml-auto" onClick={this.handleOrder}>Place Order</button>
+                <p className="cursor" onClick={() => this.props.setView('catalog', null)}>Continue Shopping</p>
+                <input type="submit" className="btn btn-primary ml-auto" value="Place Order"/>
               </div>
               <div className="mt-5">
                 <h5>Reminder: This website is for demo purposes only. Please DO NOT enter any private or sensitive information!</h5>
