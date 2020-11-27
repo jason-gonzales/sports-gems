@@ -79,12 +79,21 @@ height: 380px;
   .cart-img {
     width:250px;
   }
+  .btn-primary {
+    width: 80%;
+  }
 }
-@media screen and (max-width:285px) {
+
+
+@media screen and (max-width:320px) {
   .cart-img {
     width:180px;
   }
+  .btn-primary{
+    height: 80%;
+  }
 }
+
 
 .cart-item {
   max-width: 800px;
