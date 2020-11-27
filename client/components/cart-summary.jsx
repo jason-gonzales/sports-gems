@@ -11,7 +11,7 @@ function CartSummary(props) {
         <div className="container">
           <div className="row">
             <div className="catalog cursor" onClick={() => props.setView('catalog', null)}>Back to catalog</div>
-            <h3 className="col-12">My Cart</h3>
+            <h3 className="col-12 mt-4">My Cart</h3>
           </div>
           <div className="cart-empty"><h3>Your cart is empty</h3>
           </div>
@@ -25,7 +25,7 @@ function CartSummary(props) {
         <div className="container">
           <div className="row">
             <div className="catalog cursor" onClick={() => props.setView('catalog', null)}>Back to catalog</div>
-            <h3 className="col-12">My Cart</h3>
+            <h3 className="col-11 m-auto py-2">My Cart</h3>
           </div>
           <div className="col-11 m-auto">
             {
