@@ -1,4 +1,4 @@
-# wicked-sales-js
+# Sports Gems
 A full stack Node.js and React.js shopping cart application that simulates an ecommerce website for selecting and purchasing sports memorabilia.
 ## Technologies Used
 * React.js
