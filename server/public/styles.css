@@ -56,24 +56,27 @@ height: 380px;
     justify-content: center;
   }
 
-}
 
 @media screen and (max-width: 285px) {
   .card-detail-product{
     height: 785px;
   }
 }
+
 .cart {
   color: white;
+}
+.fa-shopping-cart {
+  color: white;
+  animation: sway1 3s infinite;
+  transform-origin: 50% 100% 0;
 
 
 }
-
-
-.cart-img {
-  width: 380px;
-  height: 350px;
-}
+ @keyframes sway1 {
+   0%, 100%{ transform: rotate(-8deg);}
+   50%{transform: rotate(20deg);}
+ }
 
 @media screen and (max-width:767px) {
   .cart-img {
