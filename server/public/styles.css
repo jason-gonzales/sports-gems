@@ -82,9 +82,7 @@ height: 380px;
   .cart-img {
     width:250px;
   }
-  .btn-primary {
-    width: 50%;
-  }
+
 }
 
 
@@ -100,6 +98,11 @@ height: 380px;
 
 .cart-item {
   max-width: 800px;
+}
+
+
+.remove-btn {
+  color: red;
 }
 
 .trophy {

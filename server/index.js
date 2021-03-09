@@ -184,6 +184,32 @@ returning "orderId","name","createdAt","creditCard","shippingAddress";
     .catch(err => next(err));
 });
 
+app.delete('/api/cart/:cartItemId', (req, res, next) => {
+  const cartItemId = parseInt(req.params.cartItemId, 10);
+  if (!req.session.cartId) {
+    return next(new ClientError('cartId does not exist in current session', 400));
+  } else if (!Number.isInteger(cartItemId) || cartItemId <= 0) {
+    return next(new ClientError('cartItemId must be a positive integer', 400));
+  }
+
+  const sql = `
+  delete from "cartItems"
+  where "cartItemId" = $1
+  and "cartId" = $2
+  returning *
+  `;
+
+  db.query(sql, [cartItemId, req.session.cartId])
+    .then(result => {
+      if (!result.rows[0]) {
+        return next(new ClientError(`cartItemId of ${cartItemId} can't be found`, 400));
+      }
+      res.status(204).json(result.rows[0]);
+    })
+    .catch(err => console.error(err));
+
+});
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });
