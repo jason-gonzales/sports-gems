@@ -23,7 +23,7 @@ function CartSummary(props) {
     return (
       <div className="cart-summary-bgs">
         <div className="container">
-          <div className=" col-11 col-xl-9 container">
+          <div className=" col-11 container">
             <div className="catalog cursor py-2" onClick={() => props.setView('catalog', null)}>Back to catalog</div>
             <div>
               <h3 className="py-2">My Cart</h3>
@@ -36,13 +36,18 @@ function CartSummary(props) {
                 cartStr = cartTotal.toString().split('');
                 cartStr.splice((cartStr.length - 2), 0, '.');
                 actualTotal = cartStr.join('');
-                return <CartSummaryItem key={item.cartItemId} item={item} />;
+                return <CartSummaryItem
+                  key={item.cartItemId}
+                  item={item}
+                  deleteFromCart={props.deleteFromCart} />;
               })
             }
           </div>
-          <div className="d-flex col-11 col-xl-9 container py-5">
-            <div><h4>{`Item Total $${actualTotal}`}</h4></div>
-            <button className="btn btn-primary ml-auto col-sm-5 col-md-3" onClick={() => props.setView('checkout', {})}>Checkout</button>
+          <div className="col-11 container py-5">
+            <div>
+              <h4>Item Total <span className="float-right">${actualTotal}</span></h4>
+            </div>
+            <button className="btn btn-primary col-md-3 float-right" onClick={() => props.setView('checkout', {})}>Checkout</button>
           </div>
         </div>
       </div>

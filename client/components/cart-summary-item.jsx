@@ -6,6 +6,10 @@ function CartSummaryItem(props) {
   pr.splice((pr.length - 2), 0, '.');
   const priceActual = pr.join('');
 
+  function handleDelete() {
+    props.deleteFromCart(props.item.cartItemId);
+  }
+
   return (
     <div className="mt-3">
       <div className="row card mb-3 cart-item m-auto">
@@ -15,6 +19,7 @@ function CartSummaryItem(props) {
         <div className="card-body text-center">
           <h5 className="card-title">{props.item.name}</h5>
           <p>${priceActual}</p>
+          <button className="btn remove-btn" onClick={handleDelete}>Remove</button>
         </div>
       </div>
     </div>

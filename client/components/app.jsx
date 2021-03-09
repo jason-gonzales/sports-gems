@@ -20,6 +20,7 @@ export default class App extends React.Component {
     this.getCartItems = this.getCartItems.bind(this);
     this.addToCart = this.addToCart.bind(this);
     this.placeOrder = this.placeOrder.bind(this);
+    this.deleteFromCart = this.deleteFromCart.bind(this);
   }
 
   componentDidMount() {
@@ -61,6 +62,20 @@ export default class App extends React.Component {
       .catch(err => console.error(err));
   }
 
+  deleteFromCart(product) {
+    fetch(`api/cart/${product}`, {
+      method: 'DELETE'
+    })
+      .then(() => {
+        const newCart = this.state.cart.filter(cartItem => cartItem.cartItemId !==
+          product);
+        this.setState({
+          cart: newCart
+        });
+      })
+      .catch(err => console.error(err));
+  }
+
   placeOrder(object) {
     const requestOptions = {
       method: 'POST',
@@ -77,6 +92,7 @@ export default class App extends React.Component {
   }
 
   render() {
+
     let view = null;
 
     if (this.state.view.name === 'catalog') {
@@ -95,11 +111,22 @@ export default class App extends React.Component {
       </>;
     } else if (this.state.view.name === 'details') {
       view =
-      <ProductDetails setView={this.setView} params={this.state.view.params} addToCart={this.addToCart} />;
+        <ProductDetails
+          setView={this.setView}
+          params={this.state.view.params}
+          addToCart={this.addToCart} />;
     } else if (this.state.view.name === 'cart') {
-      view = <CartSummary cartItem={this.state.cart} setView={this.setView} />;
+      view =
+        <CartSummary
+          deleteFromCart = {this.deleteFromCart}
+          cartItem={this.state.cart}
+          setView={this.setView} />;
     } else if (this.state.view.name === 'checkout') {
-      view = <CheckoutForm cartItem ={this.state.cart} placeOrder ={this.placeOrder} setView={this.setView} />;
+      view =
+        <CheckoutForm
+          cartItem={this.state.cart}
+          placeOrder={this.placeOrder}
+          setView={this.setView} />;
     }
 
     return (
