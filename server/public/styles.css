@@ -168,3 +168,34 @@ background-size:cover;
 .cursor:hover {
   cursor: pointer;
 }
+
+/*Modal for adding item*/
+
+.modal-add {
+  position: fixed;
+  left: 15%;
+  top: 8%;
+  color: #0062cc;
+}
+
+@media screen and (min-width: 758px) {
+  .modal-add {
+    left: 51%;
+    top: 7%;
+  }
+}
+
+/* Ipad pro */
+@media only screen and (device-width: 1024px) {
+  .modal-add {
+    top: 5%;
+    left: 52%;
+  }
+}
+
+.reminder {
+  color: red;
+}
+.cart-num {
+  color: #74a9e2
+}
