@@ -70,7 +70,7 @@ export default class CheckoutForm extends React.Component {
                 <p className="cursor" onClick={() => this.props.setView('catalog', null)}>Continue Shopping</p>
                 <input type="submit" className="btn btn-primary ml-auto" value="Place Order"/>
               </div>
-              <div className="mt-5">
+              <div className="mt-5 reminder">
                 <h5>Reminder: This website is for demo purposes only. Please DO NOT enter any private or sensitive information!</h5>
               </div>
             </div>
